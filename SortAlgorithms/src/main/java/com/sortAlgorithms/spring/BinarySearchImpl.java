@@ -1,4 +1,4 @@
-package com.myfirst.spring.fromwebsite.from28minutes;
+package com.sortAlgorithms.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
