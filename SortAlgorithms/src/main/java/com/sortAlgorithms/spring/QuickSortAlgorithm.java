@@ -1,4 +1,4 @@
-package com.myfirst.spring.fromwebsite.from28minutes;
+package com.sortAlgorithms.spring;
 
 import org.springframework.stereotype.Component;
 
