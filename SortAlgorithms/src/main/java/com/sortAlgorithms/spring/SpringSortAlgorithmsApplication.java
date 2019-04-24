@@ -1,4 +1,4 @@
-package com.myfirst.spring.fromwebsite;
+package com.sortAlgorithms.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
