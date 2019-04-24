@@ -1,11 +1,11 @@
-package com.myfirst.spring.fromwebsite.from28minutes;
+package com.myfirst.spring.fromwebsite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class SpringIn5StepsApplication {
+public class SpringSortAlgorithmsApplication {
 
 	// What are the beans?
 	// What are the dependencies of a bean?
