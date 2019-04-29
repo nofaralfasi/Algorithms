@@ -23,3 +23,24 @@ function solution(V) {
     }
     return -1;
 }
+
+
+/* Find the first covering prefix of a given array.
+A non-empty zero-indexed array A consisting of N integers is given. 
+The first covering prefix of array A is the smallest integer P such that and such that every value that occurs in array A also occurs in sequence.
+Java Solution:
+*/
+
+int coveringPrefixIndex(final int[] arr) {
+    Map<Integer,Integer> indexes = new HashMap<Integer,Integer>();
+    // start from the back
+    for(int i = arr.length - 1; i >= 0; i--) {
+        indexes.put(arr[i],i);
+    }
+    // now find the highest value in the map
+    int highestIndex = 0;
+    for(Integer i : indexes.values()) {
+        if(highestIndex < i.intValue()) highestIndex = i.intValue();
+    }
+    return highestIndex;
+}
