@@ -1,0 +1,25 @@
+/* A zero-indexed array A consisting of N integers is given. An equilibrium index of this array is any integer P such that 0 ≤ P < N and the sum of elements of lower indices is equal to the sum of elements of higher indices.
+write a function:
+int solution(int A[], int N);
+that, given a zero-indexed array A consisting of N integers, returns any of its equilibrium indices. The function should return −1 if no equilibrium index exists.
+Solution in Javascript:
+*/
+
+function solution(V) {
+    var sum = 0;
+    for (i=0; i < V.length; i++) {
+      sum += V[i];   
+    }
+
+    var leftSum= 0;
+    var rightSum = 0;
+
+    for (j=0; j < V.length; j++) {
+      rightSum = sum - (leftSum + V[j]);
+      if(leftSum == rightSum) {
+          return j;
+      }
+      leftSum += V[j];
+    }
+    return -1;
+}
