@@ -1,0 +1,102 @@
+import java.util.Scanner;
+
+public class SortSearchMerge {
+
+
+	public static void BubbleSort_while(int[] arr) // Bubble sort function
+	{
+		int pass = 1;
+		boolean exchanges = true;
+		while (pass < arr.length && exchanges) {
+			exchanges = false;
+			for (int i = 0; i < arr.length - pass; i++) {
+				if (arr[i] > arr[i + 1]) {
+					swap(arr, i, i + 1);
+					exchanges = true;
+				} // end if
+			} // end for
+			pass = pass + 1;
+		} // end while
+	} // end function bubble_sort
+
+	public static void swap(int[] arr, int from, int to) {
+
+		int temp = arr[from];
+		arr[from] = arr[to];
+		arr[to] = temp;
+	}
+
+	public static void bubbleSort_for(int[] arr) {
+		boolean bChanged = true;
+		for (int i = arr.length - 1; i > 0 && bChanged; i--) {
+			bChanged = false;
+			for (int j = 0; j < i; j++) {
+				if (arr[j] > arr[j + 1]) {
+					swap(arr, j, j + 1);
+					bChanged = true;
+				}
+			}
+		}
+	}
+
+	public static int binarySearch(int[] arr, int key) {
+		// look for key in array
+		int first, last, mid, index;
+		boolean found = false;
+		index = -1;
+		first = 0;
+		last = arr.length - 1;
+
+		while (first <= last && !found) // We continue searching until the end
+										// of array or we found the element.
+		{
+			mid = (first + last) / 2;
+			if (arr[mid] == key) {
+				index = mid;
+				found = true; // Get out
+			} else if (arr[mid] > key)
+				last = mid - 1;
+			else
+				first = mid + 1;
+			// end if
+		} // end while
+
+		return index; // Index is -1 if we did not find the element
+
+	}
+
+
+
+	// Method from Lecture
+	public static int[] mergeArrays(int arr1[], int arr2[]) {
+		int[] res = new int[arr1.length + arr2.length];
+		int i = 0, j = 0;
+		while (i < arr1.length && j < arr2.length) {
+			if (arr1[i] <= arr2[j])
+				res[i + j] = arr1[i++];
+			else
+				res[i + j] = arr2[j++];
+		}
+
+		while (i < arr1.length)
+			// copy rest of arr1
+			res[i + j] = arr1[i++];
+
+		while (j < arr2.length)
+			// copy rest of arr2
+			res[i + j] = arr2[j++];
+
+		return res;
+	}
+
+	public static void printArr(int[] arr) {
+		for (int i = 0; i < arr.length; i++)
+			System.out.print(arr[i] + " ");
+		System.out.println();
+	}
+}
+
+
+	
+
+	
