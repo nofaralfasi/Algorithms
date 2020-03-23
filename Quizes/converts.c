@@ -32,7 +32,7 @@ char* convertFromIntToChar(int num)
 
   if(neg)
   {
-     str[0]='-';
+     str[0] = '-';
   }
 
    return str;
@@ -40,10 +40,10 @@ char* convertFromIntToChar(int num)
 
 int main()
 {
-   int num=-7392;
+   int num = -7392;
    char* str;
 
-   str=fromIntToChar(num);
+   str = convertFromIntToChar(num);
 
 	printf("Num as int: %d\n", num);
    printf("Num as string: %s\n", str);
