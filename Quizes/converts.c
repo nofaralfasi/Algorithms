@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char* fromIntToChar(int num)
+char* convertFromIntToChar(int num)
 {
    char* str;
    int i, neg=0, counter=1, tmp=num;
