@@ -1,3 +1,4 @@
+ 
 public class CrystalBallRiddle {
     int breakingPoint = 99;
     int countDrops = 0;
