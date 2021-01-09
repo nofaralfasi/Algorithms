@@ -22,7 +22,7 @@ public class CrystalBallRiddle {
 
           //Drop crystal2 at 1 unit increments
           int crystal2 = previousFloor + 1;
-          while (crystal2 < crystal1 && crystal2 <= floors && !drops(crystal2)) {
+          while (crystal2 < crystal1 && crystal2 <= floors && !drop(crystal2)) {
               crystal2 +=1;
           }
           //If didn't break, return -1
